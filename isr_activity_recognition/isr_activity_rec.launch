@@ -1,0 +1,7 @@
+<launch>
+<include file="$(find openni_launch)/launch/openni.launch" >
+    <arg name="publish_tf" value="false" />
+</include>
+<!-- <node pkg="sound_play" type="soundplay_node.py"  name="soundplay_node"/> -->
+<include file="$(find pi_speech_tutorial)/launch/voice_nav_commands.launch"/>
+</launch> 
