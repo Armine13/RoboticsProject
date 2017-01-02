@@ -30,7 +30,7 @@ The idea behind the original package is to enable the robot to monitor the human
 7. Falling
 8. Sitting down
 
-The isr_activity_recognition was implemented and tested using ROS Hydro running on Ubuntu 12.04.
+The isr_activity_recognition was originally implemented and tested using ROS Hydro running on Ubuntu 12.04. We used it successfully in ROS Indigo.
 
 The instructions below will help you get the package up and running on your machine.
 
