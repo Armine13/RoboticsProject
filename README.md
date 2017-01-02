@@ -177,33 +177,71 @@ This launch file is launched in the laptop on the robot. While the "rgbdslam.lau
 
 
 
-## Running the demo
+## Running the demo of rgbdslam package
 
 This section briefly introduces how to run the demo:
 
-1) "gedit ~/.bashrc" to uncomment 
+1) In the work station: "gedit ~/.bashrc" to uncomment 
 
 2) ssh to the turtle robot to make it be ready to move: 
 
-Move it with turtlebot_bringup minimal.launch and turtlebot_teleop keyboard_teleop.launch
+Move it with "turtlebot_bringup minimal.launch" and "turtlebot_teleop keyboard_teleop.launch"
 
 or move it with joystick
 
 
-3) ssh to robot and launch the kinect with the launch file written by us, which is displayed in previous section (About the launch file for kinect):
+3) From workstation, ssh to the turtle robot again and launch the kinect with the launch file written by us, which is displayed in previous section ("About the launch file for kinect"):
 
-just copy that launch file to the laptop on the robot and run it with ssh:
+just copy that launch file to the laptop on the robot and run it with ssh from work station:
 
 roslaunch qvga-kinect.launch
 
 
-You could check if kinect works well with such command line:
+You could check if kinect works well by openning another terminal in work station and input such command line:
 
 rosrun image_view image_view image:=/camera/rgb/image_color
 
 
-4) then:
+4) then input this command in another terminal of work station:
+
 roslaunch rgbdslam rgbdslam.launch
+
+Then you can observe the result.
+
+
+
+## Running the demo of rtabmap_ros package
+
+The rtabmap_ros is similar with rgbdslam package. You could test it with such steps:
+
+
+1) In the work sttion : "gedit ~/.bashrc" to uncomment the last three lines
+
+2) ssh to the turtle robot to make it be ready to move: 
+
+Move it with "turtlebot_bringup minimal.launch" and "turtlebot_teleop keyboard_teleop.launch"
+
+or move it with joystick
+
+
+3) From workstation, ssh to the turtle robot again and launch the kinect with freenect_launch with compression information:
+
+
+roslaunch freenect_launch freenect.launch depth_registration:=true compressed:=true
+
+In the work station, open another terminal:
+
+check if the kinect work:
+
+rosrun image_view image_view image:=/camera/rgb/image_color
+
+
+4) then run rtabmap_ros package:
+
+roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" compressed:=true
+
+Then the demo is displayed
+
 
 
 
