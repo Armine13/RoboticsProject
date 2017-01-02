@@ -207,6 +207,25 @@ Then you can observe the result.
 
 
 
+### Record the rosbag
+
+If the user wants to record the rosbag, such topics should be recorded:
+
+/tf
+
+/camera/rgb/image_mono OR /camera/rgb/image_color 
+
+/camera/rgb/camera_info
+
+/camera/depth/image
+
+/camera/depth/camera_info
+
+
+Do not record more topics. The rosbag would be very big.
+
+
+
 ### Running the demo of rtabmap_ros package
 
 The rtabmap_ros is similar with rgbdslam package. You could test it with such steps:
@@ -254,24 +273,6 @@ feature detection. The right part of the interface shows the reconstruction of t
 It can be seen that with the robot moving slowly, the 3d environment is slowly built.
 
 In 00:56 it can be seen that the robot turns right and goes back, then aisle and short walls on the right side are reconstructed within the 3D environment. 
-
-
-### Record the rosbag
-
-If the user wants to record the rosbag, such topics should be recorded:
-
-/tf
-
-/camera/rgb/image_mono OR /camera/rgb/image_color 
-
-/camera/rgb/camera_info
-
-/camera/depth/image
-
-/camera/depth/camera_info
-
-
-Do not record more topics. The rosbag would be very big.
 
 
            
