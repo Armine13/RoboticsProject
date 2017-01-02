@@ -300,6 +300,8 @@ In this report, we proposed two works, human activity recognition and wireless r
   
   2b. Endres, F., Hess, J., Engelhard, N., Sturm, J., Cremers, D., & Burgard, W. (2012, May). An evaluation of the RGB-D SLAM system. In Robotics and Automation (ICRA), 2012 IEEE International Conference on (pp. 1691-1696). IEEE.
   
-  2c. Oliver, A., Kang, S., Wünsche, B. C., & MacDonald, B. (2012, November). Using the Kinect as a navigation sensor for mobile robotics. In Proceedings of the 27th Conference on Image and Vision Computing New Zealand (pp. 509-514). ACM.
+  2c. Labbe, M., & Michaud, F. (2013). Appearance-based loop closure detection for online large-scale and long-term operation. IEEE Transactions on Robotics, 29(3), 734-745.
   
-  2d. Labbe, M., & Michaud, F. (2013). Appearance-based loop closure detection for online large-scale and long-term operation. IEEE Transactions on Robotics, 29(3), 734-745.
+  2d. Oliver, A., Kang, S., Wünsche, B. C., & MacDonald, B. (2012, November). Using the Kinect as a navigation sensor for mobile robotics. In Proceedings of the 27th Conference on Image and Vision Computing New Zealand (pp. 509-514). ACM.
+  
+  
