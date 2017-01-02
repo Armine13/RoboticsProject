@@ -78,7 +78,8 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 
 ## References
+1. Mario Vieira, Diego R. Faria, Urbano Nunes, Real-time Aplication for Monitoring Human Daily Activities and Risk Situations in Robot-assisted Living, 2015
+2. Diego R. Faria, Mário Vieira, Cristiano Premebida, Urbano Nunes, Probabilistic Human Daily Activity Recognition towards Robot-assisted Living, 2015
 
-* Hat tip to anyone who's code was used
 * Inspiration
 * etc
