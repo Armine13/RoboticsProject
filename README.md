@@ -5,7 +5,9 @@ Our project is in two parts:
 * rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
 
 While the two packages do not overlap the aim in the future would be to merge them to be able to control map building with human gestures.
-The two packages are described below. Section 1 introduces human activity recognition package.  Section 2 introduces wireless real time rgbdslam. Section 3 is the Conclusion and Future Work. Section 4 is the Reference.
+The two packages are described below. 
+
+Section 1 introduces human activity recognition package.  Section 2 introduces wireless real time rgbdslam. Section 3 is the Conclusion and Future Work. Section 4 is the Reference.
 
 
 # 1. isr_activity_recognition - human activity recognition
