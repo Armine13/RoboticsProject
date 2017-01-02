@@ -290,6 +290,9 @@ In this report, we proposed two works, human activity recognition and wireless r
   
 2. Package rgbdslam by Felix Endresa: https://github.com/felixendres/rgbdslam_v2
 
+   Package rtabmap_ros by Mathieu Labbe and Franc¸ois Michaud: https://github.com/introlab/rtabmap_ros
+
+
   2a. Engelhard, N., Endres, F., Hess, J., Sturm, J., & Burgard, W. (2011, April). Real-time 3D visual SLAM with a hand-held RGB-D camera. In Proc. of the RGB-D Workshop on 3D Perception in Robotics at the European Robotics Forum, Vasteras, Sweden (Vol. 180).
   
   2b. Endres, F., Hess, J., Engelhard, N., Sturm, J., Cremers, D., & Burgard, W. (2012, May). An evaluation of the RGB-D SLAM system. In Robotics and Automation (ICRA), 2012 IEEE International Conference on (pp. 1691-1696). IEEE.
