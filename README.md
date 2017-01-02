@@ -62,7 +62,7 @@ The instructions below will help you get the package up and running on your mach
 
 ### Installation
 
-Download and make 'openni_launch' and 'openni_tracker' packages on the system of the robot, as these need direct access to the Kinect.
+Download and make """openni_launch"" and """openni_tracker""" packages on the system of the robot, as these need direct access to the Kinect.
 
 Make the 'isr_activity_recognition' on the workstation.
 
