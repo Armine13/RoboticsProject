@@ -263,18 +263,7 @@ In 00:56 it can be seen that the robot turns right and goes back, then aisle and
 
 
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-                
+           
 
 ## Authors
 
@@ -284,7 +273,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 ## 3. Conclusion and Future Work
 
-In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube vedios. Our idea was to merge our two works so that we can implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
+In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube vedios. Our idea was to merge our two works so that we could implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
 
 
 
@@ -293,3 +282,9 @@ In this report, we proposed two works, human activity recognition and wireless r
 1. Package isr_activity_recognition by Mario Vieira: https://github.com/mario-vieira/isr_activity_recognition.git
   1a. Mario Vieira, Diego R. Faria, Urbano Nunes, Real-time Aplication for Monitoring Human Daily Activities and Risk Situations in Robot-assisted Living, 2015
   1b. Diego R. Faria, Mário Vieira, Cristiano Premebida, Urbano Nunes, Probabilistic Human Daily Activity Recognition towards Robot-assisted Living, 2015
+  
+2. Package rgbdslam by Felix Endresa: https://github.com/felixendres/rgbdslam_v2
+  2a. Engelhard, N., Endres, F., Hess, J., Sturm, J., & Burgard, W. (2011, April). Real-time 3D visual SLAM with a hand-held RGB-D camera. In Proc. of the RGB-D Workshop on 3D Perception in Robotics at the European Robotics Forum, Vasteras, Sweden (Vol. 180).
+  2b.Endres, F., Hess, J., Engelhard, N., Sturm, J., Cremers, D., & Burgard, W. (2012, May). An evaluation of the RGB-D SLAM system. In Robotics and Automation (ICRA), 2012 IEEE International Conference on (pp. 1691-1696). IEEE.
+  2c. Oliver, A., Kang, S., Wünsche, B. C., & MacDonald, B. (2012, November). Using the Kinect as a navigation sensor for mobile robotics. In Proceedings of the 27th Conference on Image and Vision Computing New Zealand (pp. 509-514). ACM.
+  2d. Labbe, M., & Michaud, F. (2013). Appearance-based loop closure detection for online large-scale and long-term operation. IEEE Transactions on Robotics, 29(3), 734-745.
