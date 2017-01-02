@@ -10,7 +10,7 @@ The two packages are described below.
 Section 1 introduces human activity recognition package.  Section 2 introduces wireless real time rgbdslam. Section 3 is the Conclusion and Future Work. Section 4 is the Reference.
 
 
-# 1. isr_activity_recognition - human activity recognition
+## 1. isr_activity_recognition - human activity recognition
 
 The package was developed to track and recognize human activities real-time. It uses an RGB-D sensor to track the human skeleton and extract features. The activities are classified with Dynamic Bayesian Mixture Model (DBMM), which is a combination of several classifiers to improve accuracy.
 
@@ -68,7 +68,7 @@ Make the 'isr_activity_recognition' on the workstation.
 
 Once all the packages have been downloaded and installed, place the file 'isr_activity_recognition/isr_activity_rec.launch' on the TurtleBot system(e.g. in '/home'). This is necessary to separate the launch of 'openni_launch' from 'openni_tracker' as combining them results in errors.
 
-## Running the package
+### Running the package
 
 To start the program run the following on the TurtleBot:
 
@@ -82,13 +82,24 @@ Launch the workstation:
 
 'roslaunch isr_activity_recognition activity_recognition.launch'
 
+### Challenges Faced
+During the implementation of this part of the project we faced the following challenges:
 
-### Demo video
+* Unreliable voice recognition. The voice recongition package running on the TurtleBot does not capture speech well, probably due to distance from the human. The goal of the package is to enable interactive communication between the human and the robot. Without reliable voice recognition this aim is undermined. We were able to create a temporary workaround, by using joystick for input.
+
+* Human skeleton detection failure ('openni_tracker'). 'openni_tracker' fails to calibrate a human skeleton when the Kinect is far from the subject. 
+
+* Problem with navigation module. The navigation module of the package is designed to enable the robot to follow the human. This module does not perform as expected. This means, unfortunately, that the navigation task cannot be accomplished combined with the rest of the program. 
+
+
+### Demo example
+
+In the demo video, we see human the human in one window and the classified activities in a command window.
 
 'https://www.youtube.com/watch?v=AFvDDGZ19P4'
 
 
-# 2. rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
+## 2. rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
 
 ### Introduction
 
@@ -263,7 +274,7 @@ roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" c
 Then the demo is displayed
 
 
-### An example of the demo
+### Demo example
 
 An example of the demo (Youtube video).
 
@@ -282,14 +293,14 @@ In 00:56 it can be seen that the robot turns right and goes back, then aisle and
            
 
 
-# 3. Conclusion and Future Work
+## 3. Conclusion and Future Work
 
-In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube videos. Our idea was to merge our two works so that we could implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
-
-
+In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube videos. Our idea was to merge our two works so that we could implement controlling map building with human gestures (hand gesture, for instance). That could be a potential continuation of this work.
 
 
-# 4. References
+
+
+## 4. References
 1. Package isr_activity_recognition by Mario Vieira: https://github.com/mario-vieira/isr_activity_recognition.git
 
   1a. Mario Vieira, Diego R. Faria, Urbano Nunes, Real-time Aplication for Monitoring Human Daily Activities and Risk Situations in Robot-assisted Living, 2015
