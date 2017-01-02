@@ -104,6 +104,9 @@ The idea is inspired from such papers:
 
 3)An Evaluation of the RGB-D SLAM System (Endres et al.)
 
+4)Appearance-Based Loop Closure Detection for Online Large-Scale and Long-Term Operation (Labbe et al.)
+
+
 
 However, many 3-D reconstruction methods based on Kinect cannot work very well in real time processing with wireless wifi. So in this project we propose some methods to deal with real-time wireless processing issue. With these methods, we wrote some luanch files, which are also uploaded in the package.  
 
@@ -140,7 +143,7 @@ This section introduces how to install the packages.
 
 3) Input command line "rospack profile"
 
-The rtabmap_ros package is also recommended:
+The rtabmap_ros package is also recommended to install:
 
 sudo apt-get install ros-indigo-rtabmap-ros
 
@@ -243,11 +246,22 @@ roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" c
 Then the demo is displayed
 
 
+## An example of the demo
+
+An example of the demo (Youtube video).
 
 
-### Break down into end to end tests
+https://www.youtube.com/watch?v=7kmf-Sb3PuM&t=2s
 
-Explain what these tests test and why
+
+From the video you can see that there is an interface. The bottom left corner of the interface shows the Kinect camera frames and the 
+feature detection. The right part of the interface shows the reconstruction of the 3D environment.
+
+It can be seen that with the robot moving slowly, the 3d environment is slowly built.
+
+In 00:56 it can be seen that the robot turns right and goes back, then aisle and short walls on the right side are reconstructed within the 3D environment. 
+
+
 
 ```
 Give an example
@@ -268,6 +282,9 @@ Give an example
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
+## Conclusion and Future Work
+
+In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube vedios. Our idea was to merge our two works so that we can implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
 
 
 
