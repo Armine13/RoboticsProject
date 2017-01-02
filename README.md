@@ -3,6 +3,7 @@
 Our project is in two parts:
 * isr_activity_recognition - human activity recognition
 * rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
+
 While the two packages do not overlap the aim in the future would be to merge them to be able to control map building with human gestures.
 The two packages are described below.
 
@@ -107,8 +108,11 @@ See also the list of [contributors](https://github.com/your/project/contributors
 The package was developed for wireless real-time rgbdslam based on Kinect. It uses an xbox 360 kinect camera to get the image sequence with rgb information and depth information. With the help of these image information and tf information the algorithm extracts features and compare the features between different frames, and then reconstructs the 3D environmemt with these image frames. The 3D reconstruction method does not need other sensor, such as laser sensor, which makes the system much more convenient and cheaper.  
 
 The idea is inspired from such papers:
+
 1)Real-time 3D visual SLAM with a hand-held RGB-D camera (Engelhard et al.)
+
 2)Using the Kinect as a Navigation Sensor for Mobile Robotics (Oliver et al.)
+
 3)An Evaluation of the RGB-D SLAM System (Endres et al.)
 
 
@@ -117,10 +121,15 @@ However, many 3-D reconstruction methods based on Kinect cannot work very well i
 ### Prerequisites
 
 The conditions of running this package:
+
 1) Work station with Ubuntu system with ROS indigo
+
 2) A turtle robot with xbox 360 kinect camera and a laptop on the robot
+
 3) The wireless wifi connection between the robot and work station 
+
 4) Make sure that you have openni_launch, freenect_launch, or other proper packages to control the kinect and get image data.
+
 
 ### About the package
 
