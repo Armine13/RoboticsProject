@@ -134,7 +134,7 @@ The conditions of running this package:
 
 ### About the package
 
-openni_launch: This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
+'openni_launch': This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
 
 freenect_launch: Similar with openni_launch.
 
