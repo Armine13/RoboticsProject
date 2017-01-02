@@ -287,7 +287,7 @@ feature detection. The right part of the interface shows the reconstruction of t
 
 It can be seen that with the robot moving slowly, the 3d environment is slowly built.
 
-In 00:56 it can be seen that the robot turns right and goes back, then aisle and short walls on the right side are reconstructed within the 3D environment. 
+In 00:56 it can be seen that the robot turns right and goes back, then the small aisle and short walls on the right side are reconstructed within the 3D environment. 
 
 
            
