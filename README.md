@@ -151,6 +151,7 @@ The wireless internet speed is very slow, so we cannot send too much information
 
 So here it is recommended to use this launch file written by us:
 
+```
 
 <!-- This file demonstrates the use of SIFT features for online SLAM with a Kinect. 
      The openni driver is started from this file -->
@@ -165,6 +166,7 @@ So here it is recommended to use this launch file written by us:
   </node>
 </launch>
 
+```
 
 
 
