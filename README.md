@@ -88,7 +88,7 @@ Give an example
 
 ### Introduction
 
-The package was developed for wireless real-time rgbdslam based on Kinect. It uses an xbox 360 kinect camera to get the image sequence with rgb information and depth information. With the help of these image information and tf information the algorithm extracts features and compare the features between different frames, and then reconstructs the 3D environmemt with these image frames. The 3D reconstruction method does not need other sensor, such as laser sensor, which makes the system much more convenient and cheaper.  
+The package was developed for wireless real-time rgbdslam based on Kinect. It uses an xbox 360 kinect camera to get the image sequence with rgb information and depth information. With the help of these image information and tf information the algorithm extracts features and compare the features between different frames, and then reconstructs the 3D environment with these image frames. The 3D reconstruction method does not need other sensor, such as laser sensor, which makes the system much more convenient and cheaper.  
 
 The idea is inspired from such papers:
 
@@ -102,7 +102,7 @@ The idea is inspired from such papers:
 
 
 
-However, many 3-D reconstruction methods based on Kinect cannot work very well in real time processing with wireless wifi. So in this project we propose some methods to deal with real-time wireless processing issue. With these methods, we wrote some luanch files, which are also uploaded in the package.  
+However, many 3-D reconstruction methods based on Kinect cannot work very well in real time processing with wireless wifi. So in this project we propose some methods to deal with real-time wireless processing issue. With these methods, we wrote some launch files, which are also uploaded in the package.  
 
 ### Prerequisites
 
@@ -194,7 +194,7 @@ just copy that launch file to the laptop on the robot and run it with ssh from w
 roslaunch qvga-kinect.launch
 
 
-You could check if kinect works well by openning another terminal in work station and input such command line:
+You could check if kinect works well by opening another terminal in work station and input such command line:
 
 rosrun image_view image_view image:=/camera/rgb/image_color
 
@@ -212,7 +212,7 @@ Then you can observe the result.
 The rtabmap_ros is similar with rgbdslam package. You could test it with such steps:
 
 
-1) In the work sttion : "gedit ~/.bashrc" to uncomment the last three lines
+1) In the work station : "gedit ~/.bashrc" to uncomment the last three lines
 
 2) ssh to the turtle robot to make it be ready to move: 
 
@@ -279,7 +279,7 @@ Do not record more topics. The rosbag would be very big.
 
 # 3. Conclusion and Future Work
 
-In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube vedios. Our idea was to merge our two works so that we could implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
+In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube videos. Our idea was to merge our two works so that we could implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
 
 
 
