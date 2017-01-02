@@ -1,0 +1,10 @@
+<launch>
+	<machine name="turtlebot_1" address="192.168.0.100" user="turtlebot" password="napelturbot" default="true" timeout="30" env-loader="~/../../opt/ros/indigo/env.sh">
+
+<!-- <env-loader name="ROS_IP" value="192.168.0.200" /> -->
+<!-- <env-loader name="ROS_MASTER_URI" value="http://192.168.0.100:11311" /> -->
+</machine>
+<!--        <include file="$(find openni_launch)/launch/openni.launch"> </include> -->
+<node pkg="learning_tf" type="tf_listener" name="tf_listener"/> 
+</launch>
+
