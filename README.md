@@ -148,7 +148,7 @@ The rtabmap_ros package is also recommended to install:
 sudo apt-get install ros-indigo-rtabmap-ros
 
 
-## About the launch file for kinect
+### About the launch file for kinect
 
 In the launch folder, there are lots of launch files.
 You could run openni_launch in the laptop, move the robot and launch the rgbdslam.launch in the work station.
@@ -180,7 +180,7 @@ This launch file is launched in the laptop on the robot. While the "rgbdslam.lau
 
 
 
-## Running the demo of rgbdslam package
+### Running the demo of rgbdslam package
 
 This section briefly introduces how to run the demo:
 
@@ -213,7 +213,7 @@ Then you can observe the result.
 
 
 
-## Running the demo of rtabmap_ros package
+### Running the demo of rtabmap_ros package
 
 The rtabmap_ros is similar with rgbdslam package. You could test it with such steps:
 
@@ -246,7 +246,7 @@ roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" c
 Then the demo is displayed
 
 
-## An example of the demo
+### An example of the demo
 
 An example of the demo (Youtube video).
 
@@ -271,7 +271,7 @@ In 00:56 it can be seen that the robot turns right and goes back, then aisle and
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## 3. Conclusion and Future Work
+# 3. Conclusion and Future Work
 
 In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube vedios. Our idea was to merge our two works so that we could implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
 
@@ -280,11 +280,17 @@ In this report, we proposed two works, human activity recognition and wireless r
 
 ## References
 1. Package isr_activity_recognition by Mario Vieira: https://github.com/mario-vieira/isr_activity_recognition.git
+
   1a. Mario Vieira, Diego R. Faria, Urbano Nunes, Real-time Aplication for Monitoring Human Daily Activities and Risk Situations in Robot-assisted Living, 2015
+  
   1b. Diego R. Faria, Mário Vieira, Cristiano Premebida, Urbano Nunes, Probabilistic Human Daily Activity Recognition towards Robot-assisted Living, 2015
   
 2. Package rgbdslam by Felix Endresa: https://github.com/felixendres/rgbdslam_v2
+
   2a. Engelhard, N., Endres, F., Hess, J., Sturm, J., & Burgard, W. (2011, April). Real-time 3D visual SLAM with a hand-held RGB-D camera. In Proc. of the RGB-D Workshop on 3D Perception in Robotics at the European Robotics Forum, Vasteras, Sweden (Vol. 180).
+  
   2b.Endres, F., Hess, J., Engelhard, N., Sturm, J., Cremers, D., & Burgard, W. (2012, May). An evaluation of the RGB-D SLAM system. In Robotics and Automation (ICRA), 2012 IEEE International Conference on (pp. 1691-1696). IEEE.
+  
   2c. Oliver, A., Kang, S., Wünsche, B. C., & MacDonald, B. (2012, November). Using the Kinect as a navigation sensor for mobile robotics. In Proceedings of the 27th Conference on Image and Vision Computing New Zealand (pp. 509-514). ACM.
+  
   2d. Labbe, M., & Michaud, F. (2013). Appearance-based loop closure detection for online large-scale and long-term operation. IEEE Transactions on Robotics, 29(3), 734-745.
