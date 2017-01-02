@@ -1,4 +1,4 @@
-# RoboticsProject: Human Activity Recognition and RGBD-SLAM
+# RoboticsProject: Human Activity Recognition and wireless real-time RGBD-SLAM
 
 Our project is in two parts:
 * isr_activity_recognition - human activity recognition
