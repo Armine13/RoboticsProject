@@ -16,6 +16,7 @@ The package was developed to track and recognize human activities real-time. It 
 
 The idea behind the original package is to enable the robot to monitor the human activities and react accordingly. e.g. if the detected activity is falling, it will ask if help is needed or follow when the human says "follow me". In our project, however, we had some troubles with voice recognition, and instead the input is given through joystick buttons. 
 
+
 **ACTIVITIES:** 
 
 1. Walking
@@ -35,53 +36,56 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-The NITE library must be manually installed for openni_tracker to function.
+* The NITE library must be manually installed for `openni_tracker` to function. 
 
-The scikit-learn must be installed for classifica_w.py to work. 
+* The scikit-learn must be installed for `classifica_w.py` to work. 
 
-The sound_play node must be installed for text-to-speech. 
+* The `sound_play` node must be installed for text-to-speech. 
 
-The pocketsphinx package must be installed for speech recognition. 
+* The `pocketsphinx` package must be installed for speech recognition. 
 
 ### About the package
 
-openni_launch: This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
+* **openni_launch:** This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
 
-openni_tracker: The OpenNI tracker broadcasts the OpenNI skeleton frames using tf.
+* **openni_tracker:** The OpenNI tracker broadcasts the OpenNI skeleton frames using `tf`.
 
-pi_speech_tutorial: This package contains lauch files for speech recognition.
+* **learning_image_geometry:** This package projects the `tf` frames of the skeleton acquired by the `openni_tracker` onto an image.
 
-learning_image_geometry: This package projects the tf frames of the skeleton acquired by the openni_tracker onto an image.
+* **learninf_tf:** This package uses the `tf_listener` node to get the coordinates of the skeleton being tracked relative to the torso and camera, and the `classifica_w.py` node to recognize the activity being performed.
 
-learninf_tf: This package uses the tf_listener node to get the coordinates of the skeleton being tracked relative to the torso and camera, and the classifica_w.py node to recognize the activity being performed.
+* **pi_speech_tutorial:** This package contains lauch files for speech recognition.
 
-random_navigation_goals: This package is responsible for robot navigation. The simple_navigation_goals node makes the robot randomly navigate the environment. The follower_speed node makes the robot follow a person, using velocity commands. The follower node makes the robot follow a person if it hear "follow me", avoiding collision with the human. Finally, the follower_speed node does the same as the follower node, sending velocity commands instead.
+* **random_navigation_goals:** This package is responsible for robot navigation. The `simple_navigation_goals` node makes the robot randomly navigate the environment. The `follower_speed` node makes the robot follow a person, using velocity commands. The `follower` node makes the robot follow a person if it hear "follow me", avoiding collision with the human. Finally, the `follower_speed` node does the same as the `follower` node, sending velocity commands instead. 
 
-### Installing
+* **isr_activity_recognition:** This is the main package. It launches all necessary files for activity recognition. 
 
-## Running the tests
+### Installation
 
-Explain how to run the automated tests for this system
+Download and make 'openni_launch' and 'openni_tracker' packages on the system of the robot, as these need direct access to the Kinect.
 
-### Break down into end to end tests
+Make the 'isr_activity_recognition' on the workstation.
 
-Explain what these tests test and why
+Once all the packages have been downloaded and installed, place the file 'isr_activity_recognition/isr_activity_rec.launch' on the TurtleBot system(e.g. in '/home'). This is necessary to separate the launch of 'openni_launch' from 'openni_tracker' as combining them results in errors.
 
-```
-Give an example
-```
+## Running the package
 
-### And coding style tests
+To start the program run the following on the TurtleBot:
 
-Explain what these tests test and why
+'roslaunch isr_activity_rec.launch'
+This will launch 'openni' and sound packages.
 
-```
-Give an example
-```
-                
+Launching openni_tracker node:
+'rosrun openni_tracker openni_tracker'
+
+Launch the workstation:
+
+'roslaunch isr_activity_recognition activity_recognition.launch'
 
 
+### Demo video
 
+'https://www.youtube.com/watch?v=AFvDDGZ19P4'
 
 
 # 2. rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
