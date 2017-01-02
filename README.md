@@ -152,9 +152,9 @@ You could run openni_launch in the laptop, move the robot and launch the rgbdsla
 But you may not run it properly, because these launch files are not designed for wireless real-time processing. 
 
 
-The wireless internet speed is very slow, so we cannot send too much information from laptop on the robot to workstation through wireless internet connection. Of course, with such low data transfer speed, we cannot make it run in real-time. There are some ideas to make it work in real-time and wireless process: reduce the frame rate, reduce the image resolution and compress the information.
+The wireless internet speed is very slow, so we cannot send too much information from laptop on the robot to workstation through wireless internet connection. Of course, with such low data transfer speed, we cannot make it run in real-time. There are some ideas to make it work in real-time and wireless process: 1)reduce the frame rate  2)reduce the image resolution  3)compress the information.
 
-So here it is recommended to use this launch file written by us:
+So here it is recommended to use this launch file written by us, to make sure it works in real-time with wireless wifi:
 
 ```
 
@@ -166,23 +166,46 @@ So here it is recommended to use this launch file written by us:
   <include file="$(find openni_launch)/launch/openni.launch"/>
   <node name="$(anon dynparam)" pkg="dynamic_reconfigure" type="dynparam" args="set_from_parameters /camera/driver" clear_params="true">
      
-    <param name="image_mode" type="int" value="5" />
+    <param name="image_mode" type="int" value="5" /><!--reduce the resolution-->
     <param name="depth_mode" type="int" value="5" />
   </node>
 </launch>
 
 ```
 
+This launch file is launched in the laptop on the robot. While the "rgbdslam.launch" is launched in work station.  
 
 
 
+## Running the demo
+
+This section briefly introduces how to run the demo:
+
+1) "gedit ~/.bashrc" to uncomment 
+
+2) ssh to the turtle robot to make it be ready to move: 
+
+Move it with turtlebot_bringup minimal.launch and turtlebot_teleop keyboard_teleop.launch
+
+or move it with joystick
 
 
+3) ssh to robot and launch the kinect with the launch file written by us, which is displayed in previous section (About the launch file for kinect):
+
+just copy that launch file to the laptop on the robot and run it with ssh:
+
+roslaunch qvga-kinect.launch
 
 
-## Running the tests
+You could check if kinect works well with such command line:
 
-Explain how to run the automated tests for this system
+rosrun image_view image_view image:=/camera/rgb/image_color
+
+
+4) then:
+roslaunch rgbdslam rgbdslam.launch
+
+
 
 ### Break down into end to end tests
 
