@@ -56,22 +56,6 @@ random_navigation_goals: This package is responsible for robot navigation. The s
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
 ## Running the tests
 
 Explain how to run the automated tests for this system
@@ -143,21 +127,54 @@ rtabmap_ros: Similar with rgbdslam package.
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+This section introduces how to install the packages.
 
-Say what the step will be
+1) Download the package and extract it into src folder of catkin_ws folder.
 
-```
-Give the example
-```
+2) Go to catkin_ws directory and input command "catkin_make".
 
-And repeat
+3) Input command line "rospack profile"
 
-```
-until finished
-```
+The rtabmap_ros package is also recommended:
 
-End with an example of getting some data out of the system or using it for a little demo
+sudo apt-get install ros-indigo-rtabmap-ros
+
+
+## About the launch file for kinect
+
+In the launch folder, there are lots of launch files.
+You could run openni_launch in the laptop, move the robot and launch the rgbdslam.launch in the work station.
+But you may not run it properly, because these launch files are not designed for wireless real-time processing. 
+
+
+The wireless internet speed is very slow, so we cannot send too much information from laptop on the robot to workstation through wireless internet connection. Of course, with such low data transfer speed, we cannot make it run in real-time. There are some ideas to make it work in real-time and wireless process: reduce the frame rate, reduce the image resolution and compress the information.
+
+So here it is recommended to use this launch file written by us:
+
+
+<!-- This file demonstrates the use of SIFT features for online SLAM with a Kinect. 
+     The openni driver is started from this file -->
+<launch>
+
+
+   <param name="/camera/driver/data_skip" value="10" /><!--reduce the kinect frame rate-->
+
+  <include file="$(find openni_launch)/launch/openni.launch"/>
+  <node name="$(anon dynparam)" pkg="dynamic_reconfigure" type="dynparam" args="set_from_parameters /camera/driver" clear_params="true">
+  
+   
+    <param name="image_mode" type="int" value="5" />
+    <param name="depth_mode" type="int" value="5" />
+  </node>
+</launch>
+
+
+
+
+
+
+
+
 
 ## Running the tests
 
