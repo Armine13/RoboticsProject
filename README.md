@@ -12,6 +12,8 @@ Section 1 introduces human activity recognition package.  Section 2 introduces w
 
 ## 1. isr_activity_recognition - human activity recognition
 
+Package isr_activity_recognition by Mario Vieira et al.: https://github.com/mario-vieira/isr_activity_recognition.git
+
 The package was developed to track and recognize human activities real-time. It uses an RGB-D sensor to track the human skeleton and extract features. The activities are classified with Dynamic Bayesian Mixture Model (DBMM), which is a combination of several classifiers to improve accuracy.
 
 The idea behind the original package is to enable the robot to monitor the human activities and react accordingly. e.g. if the detected activity is falling, it will ask if help is needed or follow when the human says "follow me". In our project, however, we had some troubles with voice recognition, and instead the input is given through joystick buttons. 
