@@ -134,13 +134,13 @@ The conditions of running this package:
 
 ### About the package
 
-'openni_launch': This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
+`openni_launch`: This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
 
-freenect_launch: Similar with openni_launch.
+`freenect_launch`: Similar with openni_launch.
 
-rgbdslam: The package to get image information and other information, process such information and reconstruct the 3D environment.
+`rgbdslam`: The package to get image information and other information, process such information and reconstruct the 3D environment.
 
-rtabmap_ros: Similar with rgbdslam package.
+`rtabmap_ros`: Similar with rgbdslam package.
 
 ### Installing
 
@@ -206,17 +206,17 @@ or move it with joystick
 
 just copy that launch file to the laptop on the robot and run it with ssh from work station:
 
-roslaunch qvga-kinect.launch
+`roslaunch qvga-kinect.launch`
 
 
 You could check if kinect works well by opening another terminal in work station and input such command line:
 
-rosrun image_view image_view image:=/camera/rgb/image_color
+`rosrun image_view image_view image:=/camera/rgb/image_color`
 
 
 4) then input this command in another terminal of work station:
 
-roslaunch rgbdslam rgbdslam.launch
+`roslaunch rgbdslam rgbdslam.launch`
 
 Then you can observe the result.
 
@@ -258,18 +258,18 @@ or move it with joystick
 3) From workstation, ssh to the turtle robot again and launch the kinect with freenect_launch with compression information:
 
 
-roslaunch freenect_launch freenect.launch depth_registration:=true compressed:=true
+`roslaunch freenect_launch freenect.launch depth_registration:=true compressed:=true`
 
 In the work station, open another terminal:
 
 check if the kinect work:
 
-rosrun image_view image_view image:=/camera/rgb/image_color
+`rosrun image_view image_view image:=/camera/rgb/image_color`
 
 
 4) then run rtabmap_ros package in the work station:
 
-roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" compressed:=true
+`roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" compressed:=true`
 
 Then the demo is displayed
 
