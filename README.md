@@ -281,7 +281,7 @@ In this report, we proposed two works, human activity recognition and wireless r
 
 
 
-## References
+# 4. References
 1. Package isr_activity_recognition by Mario Vieira: https://github.com/mario-vieira/isr_activity_recognition.git
 
   1a. Mario Vieira, Diego R. Faria, Urbano Nunes, Real-time Aplication for Monitoring Human Daily Activities and Risk Situations in Robot-assisted Living, 2015
