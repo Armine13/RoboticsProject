@@ -62,32 +62,32 @@ The instructions below will help you get the package up and running on your mach
 
 ### Installation
 
-Download and make """openni_launch"" and """openni_tracker""" packages on the system of the robot, as these need direct access to the Kinect.
+* Download and make `openni_launch` and `openni_tracker` packages on the system of the robot, as these need direct access to the Kinect.
 
-Make the 'isr_activity_recognition' on the workstation.
+* Make the `isr_activity_recognition` on the workstation.
 
-Once all the packages have been downloaded and installed, place the file 'isr_activity_recognition/isr_activity_rec.launch' on the TurtleBot system(e.g. in '/home'). This is necessary to separate the launch of 'openni_launch' from 'openni_tracker' as combining them results in errors.
+* Once all the packages have been downloaded and installed, place the file `isr_activity_recognition/isr_activity_rec.launch` on the TurtleBot system(e.g. in `/home`). This is necessary to separate the launch of `openni_launch` from `openni_tracker` as combining them results in errors.
 
 ### Running the package
 
 To start the program run the following on the TurtleBot:
 
-'roslaunch isr_activity_rec.launch'
-This will launch 'openni' and sound packages.
+`roslaunch isr_activity_rec.launch`
+This will launch `openni` and sound packages.
 
 Launching openni_tracker node:
-'rosrun openni_tracker openni_tracker'
+`rosrun openni_tracker openni_tracker`
 
 Launch the workstation:
 
-'roslaunch isr_activity_recognition activity_recognition.launch'
+`roslaunch isr_activity_recognition activity_recognition.launch`
 
 ### Challenges Faced
 During the implementation of this part of the project we faced the following challenges:
 
 * Unreliable voice recognition. The voice recognition package running on the TurtleBot does not capture speech well, probably due to distance from the human. The goal of the package is to enable interactive communication between the human and the robot. Without reliable voice recognition this aim is undermined. We were able to create a temporary workaround, by using joystick for input.
 
-* Human skeleton detection failure ('openni_tracker'). 'openni_tracker' fails to calibrate a human skeleton when the Kinect is far from the subject. 
+* Human skeleton detection failure (`openni_tracker`). `openni_tracker` fails to calibrate a human skeleton when the Kinect is far from the subject. 
 
 * Problem with navigation module. The navigation module of the package is designed to enable the robot to follow the human. This module does not perform as expected. This means, unfortunately, that the navigation task cannot be accomplished combined with the rest of the program. 
 
