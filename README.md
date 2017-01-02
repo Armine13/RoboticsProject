@@ -88,7 +88,7 @@ Give an example
 
 ### Introduction
 
-The package was developed for wireless real-time rgbdslam based on Kinect. It uses an xbox 360 kinect camera to get the image sequence with rgb information and depth information. With the help of these image information and tf information the algorithm extracts features and compare the features between different frames, and then reconstructs the 3D environment with these image frames. The 3D reconstruction method does not need other sensor, such as laser sensor, which makes the system much more convenient and cheaper.  
+The package was developed for wireless real-time rgbdslam based on Kinect. It uses an xbox 360 kinect camera to get the image sequence with rgb information and depth information. With the help of these image information and tf information the algorithm extracts features and compare the features between different frames, and then reconstructs the 3D environment with these image frames. The 3D reconstruction method does not need other sensors, such as the laser sensor, which makes the system much more convenient and cheaper.  
 
 The idea is inspired from such papers:
 
@@ -102,7 +102,7 @@ The idea is inspired from such papers:
 
 
 
-However, many 3-D reconstruction methods based on Kinect cannot work very well in real time processing with wireless wifi. So in this project we propose some methods to deal with real-time wireless processing issue. With these methods, we wrote some launch files, which are also uploaded in the package.  
+However, many 3-D reconstruction methods based on Kinect cannot work very well in real time processing with wireless wifi. So in this project we propose some methods to deal with real-time wireless processing issues. With these methods, we wrote some launch files, which are introduced in the subsection "About the launch file for kinect".  
 
 ### Prerequisites
 
@@ -112,9 +112,9 @@ The conditions of running this package:
 
 2) A turtle robot with xbox 360 kinect camera and a laptop on the robot
 
-3) The wireless wifi connection between the robot and work station 
+3) The wireless wifi connection between the robot and the work station 
 
-4) Make sure that you have openni_launch, freenect_launch, or other proper packages to control the kinect and get image data.
+4) Make sure that you have openni_launch, freenect_launch, or other proper packages to control the kinect and get the image data.
 
 
 ### About the package
@@ -135,7 +135,7 @@ This section introduces how to install the packages.
 
 2) Go to catkin_ws directory and input command "catkin_make".
 
-3) Input command line "rospack profile"
+3) Input command "rospack profile"
 
 The rtabmap_ros package is also recommended to install:
 
@@ -149,9 +149,9 @@ You could run openni_launch in the laptop, move the robot and launch the rgbdsla
 But you may not run it properly, because these launch files are not designed for wireless real-time processing. 
 
 
-The wireless internet speed is very slow, so we cannot send too much information from laptop on the robot to workstation through wireless internet connection. Of course, with such low data transfer speed, we cannot make it run in real-time. There are some ideas to make it work in real-time and wireless process: 1)reduce the frame rate  2)reduce the image resolution  3)compress the information.
+The wireless internet speed is very slow, so we cannot transfer too much information from laptop on the robot to workstation through wireless internet connection. Of course, with such low data transfer speed, we cannot make it work in real-time. There are some ideas to make it work in real-time and wireless process: 1)reduce the frame rate  2)reduce the image resolution  3)compress the information.
 
-So here it is recommended to use this launch file written by us, to make sure it works in real-time with wireless wifi:
+So it is recommended to use this launch file written by us, to make sure it works in real-time with wireless wifi:
 
 ```
 
@@ -176,7 +176,7 @@ This launch file is launched in the laptop on the robot. While the "rgbdslam.lau
 
 ### Running the demo of rgbdslam package
 
-This section briefly introduces how to run the demo:
+This section briefly introduces how to run the demo of rgbdslam package:
 
 1) In the work station: "gedit ~/.bashrc" to uncomment 
 
@@ -233,7 +233,7 @@ check if the kinect work:
 rosrun image_view image_view image:=/camera/rgb/image_color
 
 
-4) then run rtabmap_ros package:
+4) then run rtabmap_ros package in the work station:
 
 roslaunch rtabmap_ros rgbd_mapping.launch rtabmap_args:="--delete_db_on_start" compressed:=true
 
