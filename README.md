@@ -30,9 +30,7 @@ The idea behind the original package is to enable the robot to monitor the human
 
 The isr_activity_recognition was implemented and tested using ROS Hydro running on Ubuntu 12.04.
 
-
-The instructions below will help you to 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+The instructions below will help you get the package up and running on your machine.
 
 ### Prerequisites
 
