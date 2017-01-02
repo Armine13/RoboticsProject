@@ -7,7 +7,7 @@ Our project is in two parts:
 While the two packages do not overlap the aim in the future would be to merge them to be able to control map building with human gestures.
 The two packages are described below.
 
-# isr_activity_recognition - human activity recognition
+# 1. isr_activity_recognition - human activity recognition
 
 The package was developed to track and recognize human activities real-time. It uses an RGB-D sensor to track the human skeleton and extract features. The activities are classified with Dynamic Bayesian Mixture Model (DBMM), which is a combination of several classifiers to improve accuracy.
 
@@ -90,7 +90,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 
 
-# rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
+# 2. rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
 
 ### Introduction
 
@@ -282,7 +282,7 @@ Give an example
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## Conclusion and Future Work
+## 3. Conclusion and Future Work
 
 In this report, we proposed two works, human activity recognition and wireless real-time rgbdslam. The prerequisites, installation, implementation and other technical details of the packages are explained in the report. The demos are shown with Youtube vedios. Our idea was to merge our two works so that we can implement controlling map building with human gestures (hand gesture, for instance). We will do this in the future.
 
