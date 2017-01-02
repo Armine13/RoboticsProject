@@ -94,7 +94,7 @@ During the implementation of this part of the project we faced the following cha
 
 ### Demo example
 
-In the demo video, we see human the human in one window and the classified activities in a command window.
+In the demo video, we see the human(Peixi) in one window and the classified activities in a command window.
 
 https://www.youtube.com/watch?v=AFvDDGZ19P4
 
