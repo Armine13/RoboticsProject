@@ -155,14 +155,11 @@ So here it is recommended to use this launch file written by us:
 <!-- This file demonstrates the use of SIFT features for online SLAM with a Kinect. 
      The openni driver is started from this file -->
 <launch>
-
-
    <param name="/camera/driver/data_skip" value="10" /><!--reduce the kinect frame rate-->
 
   <include file="$(find openni_launch)/launch/openni.launch"/>
   <node name="$(anon dynparam)" pkg="dynamic_reconfigure" type="dynparam" args="set_from_parameters /camera/driver" clear_params="true">
-  
-   
+     
     <param name="image_mode" type="int" value="5" />
     <param name="depth_mode" type="int" value="5" />
   </node>
