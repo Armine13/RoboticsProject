@@ -1,4 +1,4 @@
-# Robotics Project: Human Activity Recognition and RGBD-SLAM
+# RoboticsProject
 
 Our project is in two parts:
 * isr_activity_recognition - human activity recognition
@@ -54,7 +54,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * **learninf_tf:** This package uses the `tf_listener` node to get the coordinates of the skeleton being tracked relative to the torso and camera, and the `classifica_w.py` node to recognize the activity being performed.
 
-* **pi_speech_tutorial:** This package contains lauch files for speech recognition.
+* **pi_speech_tutorial:** This package contains launch files for speech recognition.
 
 * **random_navigation_goals:** This package is responsible for robot navigation. The `simple_navigation_goals` node makes the robot randomly navigate the environment. The `follower_speed` node makes the robot follow a person, using velocity commands. The `follower` node makes the robot follow a person if it hear "follow me", avoiding collision with the human. Finally, the `follower_speed` node does the same as the `follower` node, sending velocity commands instead. 
 
@@ -85,7 +85,7 @@ Launch the workstation:
 ### Challenges Faced
 During the implementation of this part of the project we faced the following challenges:
 
-* Unreliable voice recognition. The voice recongition package running on the TurtleBot does not capture speech well, probably due to distance from the human. The goal of the package is to enable interactive communication between the human and the robot. Without reliable voice recognition this aim is undermined. We were able to create a temporary workaround, by using joystick for input.
+* Unreliable voice recognition. The voice recognition package running on the TurtleBot does not capture speech well, probably due to distance from the human. The goal of the package is to enable interactive communication between the human and the robot. Without reliable voice recognition this aim is undermined. We were able to create a temporary workaround, by using joystick for input.
 
 * Human skeleton detection failure ('openni_tracker'). 'openni_tracker' fails to calibrate a human skeleton when the Kinect is far from the subject. 
 
