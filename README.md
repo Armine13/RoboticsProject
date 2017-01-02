@@ -134,13 +134,13 @@ The conditions of running this package:
 
 ### About the package
 
-`openni_launch`: This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
+openni_launch: This package contains launch files for using OpenNI-compliant devices such as the Microsoft Kinect in ROS.
 
-`freenect_launch`: Similar with openni_launch.
+freenect_launch: Similar with openni_launch.
 
-`rgbdslam`: The package to get image information and other information, process such information and reconstruct the 3D environment.
+rgbdslam: The package to get image information and other information, process such information and reconstruct the 3D environment.
 
-`rtabmap_ros`: Similar with rgbdslam package.
+rtabmap_ros: Similar with rgbdslam package.
 
 ### Installing
 
