@@ -92,7 +92,7 @@ See also the list of [contributors](https://github.com/your/project/contributors
 
 # rgbdslam_kinetic - wireless real-time rgbdslam based on Kinect
 
-### Introduction** 
+### Introduction
 
 The package was developed for wireless real-time rgbdslam based on Kinect. It uses an xbox 360 kinect camera to get the image sequence with rgb information and depth information. With the help of these image information and tf information the algorithm extracts features and compare the features between different frames, and then reconstructs the 3D environmemt with these image frames. The 3D reconstruction method does not need other sensor, such as laser sensor, which makes the system much more convenient and cheaper.  
 
